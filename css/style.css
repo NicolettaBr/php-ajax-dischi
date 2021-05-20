@@ -26,7 +26,6 @@ body{
 
 /*main*/
 .container-cards{
-    background-color: coral;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -39,4 +38,10 @@ body{
     text-align: center;
     padding: 20px 30px;
     margin: 20px 0;
+}
+
+.card .title,
+.card .author,
+.card .year{
+    margin-top: 5px;
 }

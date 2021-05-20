@@ -6,78 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ajax-dischi</title>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="container">
 
-        <!--HEADER-->
-        <header>
+    <div id="root">
 
-            <div class="logo">
-                <img src="img/spotify-logo.png" alt="logo">
-            </div>
+        <div class="container">
 
-        </header>
-        <!--END HEADER-->
-
-        <!--MAIN-->
-        <main>
-
-            <div class="container-cards">
-
-                <!--card-->
-                <div class="card">
-                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-                    <div class="title">New Jersey</div>
-                    <div class="author">Bon Jovi</div>
-                    <div class="year">1988</div>
+            <!--HEADER-->
+            <header>
+    
+                <div class="logo"> 
+                    <img src="img/spotify-logo.png" alt="logo">
                 </div>
-                <!--end card-->
-
-                <!--card-->
-                <div class="card">
-                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-                    <div class="title">New Jersey</div>
-                    <div class="author">Bon Jovi</div>
-                    <div class="year">1988</div>
+    
+            </header>
+            <!--END HEADER-->
+    
+            <!--MAIN-->
+            <main>
+    
+                <div class="container-cards">
+    
+                    <!--card-->
+                    <div class="card" v-for="card in cd_cards">
+                        <img :src="card.poster" alt="card.title">
+                        <div class="title">{{card.title}}</div>
+                        <div class="author">{{card.author}}</div>
+                        <div class="year">{{card.year}}</div>
+                    </div>
+                    <!--end card-->
+    
                 </div>
-                <!--end card-->
-
-                <!--card-->
-                <div class="card">
-                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-                    <div class="title">New Jersey</div>
-                    <div class="author">Bon Jovi</div>
-                    <div class="year">1988</div>
-                </div>
-                <!--end card-->
-
-                <!--card-->
-                <div class="card">
-                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-                    <div class="title">New Jersey</div>
-                    <div class="author">Bon Jovi</div>
-                    <div class="year">1988</div>
-                </div>
-                <!--end card-->
-
-                <!--card-->
-                <div class="card">
-                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-                    <div class="title">New Jersey</div>
-                    <div class="author">Bon Jovi</div>
-                    <div class="year">1988</div>
-                </div>
-                <!--end card-->
-
-                
-
-            </div>
-
-        </main>
-        <!--END MAIN-->
-
+    
+            </main>
+            <!--END MAIN-->
+    
+        </div>
+        
     </div>
     
     
